@@ -1,0 +1,21 @@
+server:
+  listen: 8080
+  workers: 4
+  upstreams:
+    - id: upstream1
+      url: https://api.example.com
+    - id: upstream2
+      url: https://service.example.net
+  headerSchema:
+    - key: X-Custom-Header
+      value: MyCustomValue
+    - key: X-Security-Token
+      value: SecureToken123
+  rules:
+    - path: /api/v1
+      upstreams:
+        - upstream1
+        - upstream2
+    - path: /healthcheck
+      upstreams:
+        - upstream2

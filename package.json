@@ -4,17 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/index.js --config config.yaml",
     "build": "tsc -p .",
-    "dev": "tsc-watch  --onSuccess \"npm start\""
+    "dev": "tsc-watch  --onSuccess \"npm start \""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.10.3"
+    "@types/node": "^22.10.3",
+    "tsc-watch": "^6.2.1"
   },
   "dependencies": {
+    "commander": "^13.0.0",
     "yaml": "^2.7.0",
     "zod": "^3.24.1"
   }
