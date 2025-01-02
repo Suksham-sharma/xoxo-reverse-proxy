@@ -1,0 +1,21 @@
+{
+  "name": "xoxo-reverse-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc -p .",
+    "dev": "tsc-watch  --onSuccess \"npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.3"
+  },
+  "dependencies": {
+    "yaml": "^2.7.0",
+    "zod": "^3.24.1"
+  }
+}
